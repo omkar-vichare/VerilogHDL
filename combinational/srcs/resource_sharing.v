@@ -1,6 +1,6 @@
 // *****************************************************************
-// Module Name  : arithmetic_operator
-// Author       : Omkar Vichare
+// Module Name  : resource_sharing
+// Author       : Omkar V
 //
 // Description  : 
 // *****************************************************************

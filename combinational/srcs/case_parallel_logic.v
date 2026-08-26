@@ -1,6 +1,6 @@
 // *****************************************************************
-// Module Name  : arithmetic_operator
-// Author       : Omkar Vichare
+// Module Name  : case_parallel_logic
+// Author       : Omkar V
 //
 // Description  : 
 // *****************************************************************
@@ -38,8 +38,8 @@ module case_parallel_logic #(
     assign quotient  = a_in / b_in;
 
     //--------------------------------------------------------------
-    // Using case statement based on select operation 
-    //
+    // mux's are generated in such a way that output of each
+    // operator will have same delay to reach output.
     //--------------------------------------------------------------
 
     always @(*) begin : arithmetics

@@ -1,3 +1,9 @@
+// *****************************************************************
+// Module Name  : logical_operator
+// Author       : Omkar V
+//
+// Description  : 
+// *****************************************************************
 module logical_operator #(
 	parameter DATA_WIDTH = 4
 )(
@@ -13,6 +19,7 @@ module logical_operator #(
 
 	output reg  [DATA_WIDTH-1:0] logical_out,
 );
+
 	//--------------------------------------------------------------
 	// Output of logical operators is always 1-bit.
 	// What hardware is generated, if logical operation is performed 
