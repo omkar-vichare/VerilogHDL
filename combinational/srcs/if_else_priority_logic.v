@@ -13,16 +13,19 @@ module if_else_priority_logic #(
 
     input  wire [$clog2(NO_OF_OPER)-1:0] select_operation,
 
-    output wire [DATA_WIDTH-1:0] mux_out
+    output reg  [DATA_WIDTH-1:0] mux_out
 );
 
-    wire [] interim__;
-
     //--------------------------------------------------------------
-    // 
-    // 
+    // if else generates priority logic.
+    // What happens when opcode for subtraction is same as addition
+    // which is 2'b00???
+    // -> because addition has priority over subtraction, output of
+    //    addition will be choosen always. And only decoding logic
+    //    will change.
+    // -> And so, for opcode 2'b01 and 2'b11, div will be performed
+    //    and subtraction branch will never execute.
     //--------------------------------------------------------------
-
     always @(*) begin : arithmetics
         if (select_operation == 2'b00) begin
             mux_out = a_in + b_in;
@@ -35,4 +38,4 @@ module if_else_priority_logic #(
         end
     end
 
-endmodule : if_else_priority_logic
+endmodule

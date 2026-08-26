@@ -1,3 +1,10 @@
+// *****************************************************************
+// Module Name  : re_order_ba_in_clocked_design
+// Author       : Omkar V
+//
+// Description  : Our intention is to design 3-bit shift register
+//                and so we are expecting 3FF to be infer by tool. 
+// *****************************************************************
 module re_order_nba_in_clocked_design 
 (
 	input  wire clk,
@@ -11,6 +18,10 @@ module re_order_nba_in_clocked_design
 	reg interim1__; 
 	reg interim2__;
 
+	//--------------------------------------------------------------
+	// Using NBA for sequential design, will always generate
+	// intended number of flops.
+	//--------------------------------------------------------------
 	always @(posedge clk) begin : shift_register
 	 	if(reset == 1'b1) begin
 	 		interim1__ <= 1'b0;

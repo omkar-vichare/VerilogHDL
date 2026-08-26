@@ -2,7 +2,8 @@
 // Module Name  : tristate_buffer
 // Author       : Omkar V
 //
-// Description  : 
+// Description  : generate tristate buffer, high impedence at
+//                output based on enable bit.
 // *****************************************************************
 module tristate_buffer #(
 	parameter BUS_WIDTH = 8
@@ -13,6 +14,10 @@ module tristate_buffer #(
 	output reg  [BUS_WIDTH-1:0] data_bus_out
 );
 
+	//--------------------------------------------------------------
+	// When output is driven to (Z) which is high impedence, tool
+	// will infer a tristate buffer.
+	//--------------------------------------------------------------
 	always @(*) begin : tristate_buff
 		if (enable == 1'b1) begin
 			data_bus_out = data_bus_in;

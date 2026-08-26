@@ -1,3 +1,12 @@
+// *****************************************************************
+// Module Name  : re_order_ba_in_clocked_design
+// Author       : Omkar V
+//
+// Description  : explains how BA in sequential design affects the
+//                hardware. Our intention is to design 3-bit shift
+//                register and so we are expecting 3FF to be
+//                infer by tool. 
+// *****************************************************************
 `define SYNTH_1FF
 `define SYNTH_2FF
 `define SYNTH_3FF
@@ -51,5 +60,5 @@ module re_order_ba_in_clocked_design
 	 		end
 	 	end
 	`endif
-	
+
 endmodule
