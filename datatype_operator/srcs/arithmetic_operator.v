@@ -46,7 +46,7 @@ module arithmetic_operator #(
 	end
 
 	//--------------------------------------------------------------
-	// Division Operator.
+	// Division, Modulus Operator.
 	// Output size should be (2x) the input vector size.
 	// Output has two parts, first LSB bits (half output size) is
 	// used to stored quotient and MSB bits is used to store
