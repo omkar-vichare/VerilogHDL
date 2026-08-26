@@ -1,3 +1,9 @@
+// *****************************************************************
+// Module Name  : arithmetic_operator
+// Author       : Omkar Vichare
+//
+// Description  : 
+// *****************************************************************
 module arithmetic_operator #(
 	parameter DATA_WIDTH = 4
 )(
@@ -34,7 +40,7 @@ module arithmetic_operator #(
 	// flag is used to store the borrow of subtraction.
 	//-------------------------------------------------------------- 
 	always @(*) begin : subtraction_logic
-		{borrow_flag, add_out} = a_in - b_in; // MSB is BORROW_bit.
+		{borrow_flag, sub_out} = a_in - b_in; // MSB is BORROW_bit.
 	end
 
 	//--------------------------------------------------------------

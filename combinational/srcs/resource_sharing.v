@@ -1,3 +1,9 @@
+// *****************************************************************
+// Module Name  : arithmetic_operator
+// Author       : Omkar Vichare
+//
+// Description  : 
+// *****************************************************************
 `define OPTIMIZED_DESIGN
 module resource_sharing #(
 	parameter DATA_WIDTH = 8,
@@ -12,7 +18,7 @@ module resource_sharing #(
 );
 
 	`ifdef OPTIMIZED_DESIGN
-		
+
 	`else 
 
 	`endif
