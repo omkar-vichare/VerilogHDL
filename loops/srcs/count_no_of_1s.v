@@ -6,14 +6,14 @@
 //                loop.
 // *****************************************************************
 module count_no_of_1s #(
-    parameter DATA_WIDTH = 8
+    parameter DATA_WIDTH = 2
 )(
     input  wire [DATA_WIDTH-1:0] a_in,
 
-    output wire [$clog2(DATA_WIDTH)-1:0] count
+    output wire [$clog2(DATA_WIDTH + 1)-1:0] count
 );
     
-    wire [$clog2(DATA_WIDTH)-1:0] interim__;
+    reg [$clog2(DATA_WIDTH + 1)-1:0] interim__;
 
     integer i;
 
@@ -28,7 +28,8 @@ module count_no_of_1s #(
     //--------------------------------------------------------------
 
     always @(*) begin : count_no_of_1s_in_input
-        for (i = 0; i < DATA_WIDTH; i++) begin
+        interim__ = 0;
+        for (i = 0; i < DATA_WIDTH; i= i + 1) begin
             if (a_in[i] == 1'b1) begin
                 interim__ = interim__ + 1'b1;
             end else begin
@@ -39,4 +40,4 @@ module count_no_of_1s #(
 
     assign count = interim__;
 
-endmodule : count_no_of_1s
+endmodule
