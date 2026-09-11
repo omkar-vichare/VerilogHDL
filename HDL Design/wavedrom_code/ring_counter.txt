@@ -1,0 +1,7 @@
+{signal: [
+  {},
+  {name: 'clk_in' , wave: 'P'+'.'.repeat(15)},
+  {name: 'reset_p', wave: '10............1.'},
+  {name: 'output' , wave: '3.3333333333333.' , data: [0,8,4,2,1,8,4,2,1,8,4,2,1,0]},
+  {}
+]}

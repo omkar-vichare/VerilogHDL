@@ -1,0 +1,6 @@
+{signal: [
+  {},
+  {name: 'clk_in', wave: 'P'+'.'.repeat(14)},
+  {name: 'outout', wave: 'Hpl'  .repeat(5)},
+  {}
+]}
