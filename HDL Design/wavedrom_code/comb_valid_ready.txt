@@ -1,15 +1,12 @@
 {signal: [
   {},
-  {name: 'clk'            , wave: 'P....|........'},
-  {name: 'reset_p'        , wave: '10...|......1.'},
-  
   {name: 'valid (in)'     , wave: '0.10|.1...0...'},
   {name: 'addr [7:0] (in)', wave: 'x.3x|.3333x...', data: ['2' ,'AA','AB','FF','CD']},
   {name: 'data [7:0] (in)', wave: 'x.3x|.3333x...', data: ['80','AF','1C','29','06']},
   
   {name: 'ready (out)'    , wave: '0.10|.1...0...'},
   {name: 'mem_en (out)'   , wave: '0.10|.1...0...'},
-  {name: 'mem_addr (out)' , wave: '5.55|.55555...', data: ['0','2' ,'','AA','AB','FF','CD']},
-  {name: 'mem_data (out)' , wave: '5.55|.55555...', data: ['0','80','','AF','1C','29','06']},
+  {name: 'mem_addr [7:0] (out)' , wave: '5.55|.55555...', data: ['0','2' ,'','AA','AB','FF','CD']},
+  {name: 'mem_data [7:0] (out)' , wave: '5.55|.55555...', data: ['0','80','','AF','1C','29','06']},
   {}
 ]}
