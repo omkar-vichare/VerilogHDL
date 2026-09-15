@@ -1,6 +1,17 @@
 {signal: [
-  {},
-  {name: 'clk_in', wave: 'P'+'.'.repeat(15)},
-  {name: 'outout', wave: 'lH'   .repeat(8)},
+  {name: 'clk (in)'  , wave: 'P'+'.'    .repeat(15)},
+  {                                     node: '.AB'},
+  {name: 'reset_p (in)' , wave: '10'+'.'.repeat(14)},
+  {name: 'freq (out)'   , wave: '0'+'.H' +'lH'.repeat(6)+'l'},
+  {                                  node: '..C.D'},
   {}
-]}
+],
+edge: [
+   'A+B  t',
+   'C+D 2t'
+ ],
+ head: {
+   tick : 0,
+   every: 1
+ }
+}
