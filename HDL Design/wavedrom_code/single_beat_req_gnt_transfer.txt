@@ -1,6 +1,6 @@
 {signal: [
   ['global',
-  	{name: 'clk (in)'   , wave: 'P..............'},
+   {name: 'clk (in)'    , wave: 'P..............'},
    {name: 'reset_p (in)', wave: '10............1'},
   ],
   ['manager',
@@ -10,7 +10,7 @@
   ],
   ['subordinate',
   	{name: 'grant (out)'          , wave: '0..10..10.1010.'},
-  	{name: 'state [1:0] (interim)', wave: 'x3.33..33.3333.', data:['IDLE','GNT','IDLE','GNT','IDLE','GNT','IDLE','GNT','IDLE']},
+  	{name: 'state [1:0] (interim)', wave: 'x3.33..33.3333.', data: ['IDLE','GNT','IDLE','GNT','IDLE','GNT','IDLE','GNT','IDLE']},
   	{name: 'mem_en (out)'         , wave: '0..10..10.1010.'},
   	{name: 'mem_addr [7:0] (out)' , wave: 'x..5x..5x.5x5x.', data: ['2' ,'AA','AB','FF']},
   	{name: 'mem_data [7:0] (out)' , wave: 'x..5x..5x.5x5x.', data: ['80','AF','1C','29']},
