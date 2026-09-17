@@ -27,7 +27,7 @@
    'G<->H reset',
   ],
  head: {
-  text :'synchronous FIFO full operation, { here FIFO depth is 8 }',
+  text :'synchronous FIFO full condition, { here FIFO depth is 8 }',
    tick :0,
    every:1
  },
