@@ -1,0 +1,38 @@
+{signal: [
+  ['global',
+   {name: 'clk (in)'    , wave: 'P...................'},
+   {name: 'reset_p (in)', wave: '0.................1.' , node: 'F.................G.H'},
+  ],
+  ['write_port',
+   {name: 'wr_en (in)'        , wave: '1..0................'},
+   {name: 'data_in [N:0] (in)', wave: '333x................' , data: ['D5','D6','D7']},
+   {name: 'fifo_full (out)'   , wave: '0..1...0............'}
+  ],
+  ['pointer',
+   {name: 'wr_ptr [3:0] (interim)', wave: '3333...............3', data: ['A5','A6','A7','A8','A0']},
+   {name: 'rd_ptr [3:0] (interim)', wave: '3......33333.333...3', data: ['A0','A1','A2','A3','A4','A5','A6','A7','A8','A0']},
+  ],
+  ['read_port',
+   {name: 'rd_en (in)'          , wave: '0.....1....01..0....'},
+   {name: 'data_out [N:0] (out)', wave: '5......55555.555...5' , data: ['0','D0','D1','D2','D3','D4','D5','D6','D7','0']},
+   {name: 'fifo_empty (out)'    , wave: '0..............1....'}
+  ],
+   {node: 'C...................D'}
+ ],
+ edge: [
+   'A+B 1ns', 
+   'C|->D time (ns)',
+   'E<->F reset',
+   'F<->G run_phase',
+   'G<->H reset',
+  ],
+ head: {
+  text :'synchronous FIFO empty condition, { here FIFO depth is 8 }',
+   tick :10,
+   every:1
+ },
+ foot: {
+   tick : 10,
+   every: 1
+   }
+}
