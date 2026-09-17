@@ -7,7 +7,7 @@
    {name: 'wr_en (in)'        , wave: '0..1..01....0.10..'},
    {name: 'data_in [N:0] (in)', wave: 'x..333.33333x.3x..', data: ['D0','D1','D2','D3','D4','D5','D6','D7','D8']},
    {name: 'fifo_full (out)'   , wave: '0...........1....0'},
-   {name: 'overflow_flag'	  , wave: '0..............10.'}
+   {name: 'overflow_flag (out)'	  , wave: '0..............10.'}
   ],
   ['pointer',
    {name: 'wr_ptr [3:0] (interim)', wave: '3...333.33333....3', data: ['A0','A1','A2','A3','A4','A5','A6','A7','A8','A0']},
