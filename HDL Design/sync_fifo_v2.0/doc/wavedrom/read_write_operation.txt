@@ -1,0 +1,44 @@
+{signal: [
+  ['global',
+   {name: 'clk (in)'    , wave: 'P..................'},
+   {name: 'reset_p (in)', wave: '1.0..............1.', node: 'E.F..............G.H'},
+  ],
+  ['write_port',
+   {name: 'wr_en (in)'         , wave: '0..101..0..........'},
+   {name: 'data_in [N:0] (in)' , wave: 'x..3x333x..........' , data: ['D0','D1','D2','D3']},
+   {name: 'fifo_full (out)'    , wave: '0..................'},
+   {name: 'almost_full (out)'  , wave: '0..................'},
+   {name: 'wr_ack (out)'       , wave: '0...101..0.........'},
+   {name: 'overflow_flag (out)', wave: '0..................'}
+  ],
+  ['pointer',
+   {name: 'wr_ptr [3:0] (interim)', wave: '3...3.333.........3', data: ['A0','A1','A2','A3','A4','A0']},
+   {name: 'rd_ptr [3:0] (interim)', wave: '3.........3.33.3..3', data: ['A0','A1','A2','A3','A4','A0']},
+  ],
+  ['read_port',
+   {name: 'rd_en (in)'  		, wave: '0........101.010...'},
+   {name: 'valid (out)'         , wave: '0.........101.010..'},
+   {name: 'data_out [N:0] (out)', wave: '5.........5.55.5..5' , data: ['0','D0','D1','D2','D3','0']},
+   {name: 'fifo_empty (out)'    , wave: '1...0..........1...'},
+   {name: 'almost_empty (out)'  , wave: '1...0........1.....'},
+   {name: 'underflow_flag (out)', wave: '0..................'}
+  ],
+   {node: 'C..................D'}
+ ],
+ edge: [
+   'A + B 1ns'      , 
+   'C|->D time (ns)',
+   'E<->F reset'    ,
+   'F<->G run_phase',
+   'G<->H reset'
+ ],
+ head: {
+   text :'synchronous FIFO write read operations, { here FIFO depth is 8 }',
+   tick :0,
+   every:1
+ },
+ foot: {
+   tick : 0,
+   every: 1
+ }
+}
