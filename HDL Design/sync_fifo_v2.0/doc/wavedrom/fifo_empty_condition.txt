@@ -5,7 +5,7 @@
   ],
   ['write_port',
    {name: 'wr_en (in)'         , wave: '1..0..............10...'},
-   {name: 'data_in [N:0] (in)' , wave: '333x...................' , data: ['D5','D6','D7']},
+   {name: 'data_in [N:0] (in)' , wave: '333x..............3x...' , data: ['D5','D6','D7','D8']},
    {name: 'fifo_full (out)'    , wave: '0..1...0...............'},
    {name: 'almost_full (out)'  , wave: '0.1....0...............'},
    {name: 'wr_ack (out)'       , wave: '01..0..............10..'},
